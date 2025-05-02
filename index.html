@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sangeethrajan.S - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    header {
+      background: #1c1c1c;
+      padding: 20px 40px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00d4ff;
+    }
+    header p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #111;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #00d4ff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00ffa2;
+    }
+    section {
+      padding: 50px 40px;
+    }
+    .about, .contact, .projects {
+      max-width: 1000px;
+      margin: auto;
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #00ffa2;
+    }
+    .project {
+      margin-bottom: 20px;
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .project-title {
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #00d4ff;
+    }
+    .project-description {
+      display: none;
+      margin-top: 10px;
+      color: #ddd;
+    }
+    .contact p, .about p {
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sangeethrajan S</h1>
+    <p>ECE Student | 2nd Year | 8 CGPA | Aspiring Semiconductor Engineer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I’m Sangeethrajan, currently in my 2nd year of ECE at Dr. Mahalingam College of Engineering and Technology. My goal is to be placed in the semiconductor industry. I am eagerly waiting for internship opportunities to gain hands-on experience. I have participated in multiple technical events, workshops, and hackathons, and have a CGPA of 8.0.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <div class="project-title" onclick="toggleDescription('desc1')">Smart Bus System 🚍</div>
+      <div id="desc1" class="project-description">
+        This system counts passengers, prevents footboarding, shows available seats at upcoming stops via ESP32 & ESP12E, and ensures driver sobriety. IR and ultrasonic sensors, servo motors, and LCDs are used.
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-title" onclick="toggleDescription('desc2')">Smart Traffic Signal System 🚦</div>
+      <div id="desc2" class="project-description">
+        A 4-lane smart traffic system using ESP32 and IR sensors, adjusting signal timings dynamically and offering ambulance override via a mobile app. Includes LED indicators and real-time lane status updates.
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:sangeethrajan756@gmail.com" style="color:#00d4ff;">sangeethrajan756@gmail.com</a></p>
+    <p>📱 Phone: <a href="tel:8248508685" style="color:#00ffa2;">8248508685</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sangeethrajan S. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDescription(id) {
+      var desc = document.getElementById(id);
+      desc.style.display = (desc.style.display === "none" || desc.style.display === "") ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
 
